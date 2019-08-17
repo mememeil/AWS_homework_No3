@@ -1,1 +1,9 @@
 <h1>名前管理アプリです</h1>
+
+<%= form_tag ("/create") do %>
+  <%= label_tag "form_name", "名前" %>
+  <%= text_field :users, :name, id: "form_name" %>
+  <%= label_tag "form_age", "年齢" %>
+  <%= text_field :users, :age, id: "form_age" %>
+  <%= submit_tag "登録" %>
+<% end %>
