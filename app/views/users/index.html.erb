@@ -2,8 +2,13 @@
 
 <%= form_tag ("/create") do %>
   <%= label_tag "form_name", "名前" %>
-  <%= text_field :users, :name, id: "form_name" %>
+  <%= text_field :user, :name, id: "form_name" %>
   <%= label_tag "form_age", "年齢" %>
-  <%= text_field :users, :age, id: "form_age" %>
+  <%= text_field :user, :age, id: "form_age" %>
   <%= submit_tag "登録" %>
+<% end %>
+
+<h2>一覧</h2>
+<% @users.each do |user| %>
+  <p><%= user.name %>, <%= user.age %></p>
 <% end %>

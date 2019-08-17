@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   def index
-
+    @users = User.all
   end
 
   def create
-    render plain: params["users"]["name"] + ":" + params["users"]["age"]
+    User.create(name: params["user"]["name"], age: params["user"]["age"])
+    redirect_to "/"
   end
 end
