@@ -1,24 +1,17 @@
-# README
+# Name
+name-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+名前と年齢を登録できるアプリです
 
-Things you may want to cover:
+## Description
+フォームに名前と年齢を入力し「登録」ボタンを押します
+すると、入力した名前と年齢が下部に一覧で表示されます
+登録するたびに、一覧に追加されていきます
 
-* Ruby version
+注意点:
+* バリデーションを行っていません
+* 名前には文字列、年齢には数値を入力してください
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Demo
+![name_app](https://user-images.githubusercontent.com/52843996/63211559-c7238f00-c133-11e9-87f9-5742ad5a4ea6.gif)
