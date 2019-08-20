@@ -14,4 +14,4 @@ name-app
 * 名前には文字列、年齢には数値を入力してください
 
 ## Demo
-![name_app](https://user-images.githubusercontent.com/52843996/63211559-c7238f00-c133-11e9-87f9-5742ad5a4ea6.gif)
+![name_app](https://user-images.githubusercontent.com/52843996/63366541-f268e100-c3b4-11e9-8029-b82615ec81d9.gif)
