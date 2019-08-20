@@ -1,16 +1,35 @@
-<h1>名前管理アプリです</h1>
+<div class="container">
+  <h1>名前管理アプリです</h1>
 
-<%= form_tag ("/create") do %>
-  <%= label_tag "form_name", "名前" %>
-  <%= text_field :user, :name, id: "form_name" %>
-  <%= label_tag "form_age", "年齢" %>
-  <%= text_field :user, :age, id: "form_age" %>
-  <%= submit_tag "登録" %>
-<% end %>
+  <%= form_tag ("/create") do %>
+    <div class="form-group">
+      <%= label_tag "form_name", "名前" %>
+      <%= text_field :user, :name, id: "form_name", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag "form_age", "年齢" %>
+      <%= text_field :user, :age, id: "form_age", class: "form-control" %>
+    </div>
+    <%= submit_tag "登録", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<h2>一覧</h2>
-<% @users.each do |user| %>
-  <p><%= user.name %>, <%= user.age %></p>
-  <a href="/user/<%= user.id %>" data-method="delete">削除</a>
-  <a href="/user/<%= user.id %>/edit">編集</a>
-<% end %>
+<div class="container">
+  <h2>一覧</h2>
+  <table class="table table-striped">
+      <tr>
+        <th>名前</th>
+        <th>年齢</th>
+        <th>削除</th>
+        <th>編集</th>
+      </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td><a href="/user/<%= user.id %>" data-method="delete">削除</a></td>
+        <td><a href="/user/<%= user.id %>/edit">編集</a></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
