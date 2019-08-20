@@ -1,0 +1,9 @@
+<h1>編集画面です</h1>
+
+<%= form_tag("/user/"+@user.id.to_s,:method=>:patch) do%>
+  <%= label_tag "form_name", "名前" %>
+  <%= text_field :user, :name, id: "form_name", value: @user.name %>
+  <%= label_tag "form_age", "年齢" %>
+  <%= text_field :user, :age, id: "form_age", value: @user.age %>
+  <%= submit_tag "変更" %>
+<% end %>
