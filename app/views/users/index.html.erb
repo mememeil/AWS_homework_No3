@@ -10,5 +10,5 @@
 
 <h2>一覧</h2>
 <% @users.each do |user| %>
-  <p><%= user.name %>, <%= user.age %></p>
+  <p><%= user.name %>, <%= user.age %></p><a href="/user/<%= user.id %>" data-method="delete">削除</a>
 <% end %>
